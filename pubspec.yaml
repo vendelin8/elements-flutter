@@ -1,0 +1,48 @@
+name: elements
+description: Chinese zodiac five elements as a pageable calendar
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+100
+
+environment:
+  sdk: ">=2.19.2 <3.0.0"
+  flutter: ">=3.7.5"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.1
+  flutter_launcher_icons: ^0.13.0
+
+flutter_icons:
+  image_path: img/GooglePlayStore.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    background_color: "#ffffff"
+    theme_color: "#43A047"
+  windows:
+    generate: true
+    icon_size: 256 # min:48, max:256, default: 48
+  macos:
+    generate: true
+
+flutter:
+  uses-material-design: true
+  assets:
+   - images/wood.png
+   - images/fire.png
+   - images/earth.png
+   - images/metal.png
+   - images/water.png

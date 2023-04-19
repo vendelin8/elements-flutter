@@ -1,0 +1,29 @@
+version: '3'
+
+tasks:
+  release:
+    cmds:
+      - flutter build appbundle
+      - java -jar ../pac/others/bundletool-all-1.14.1.jar build-apks --overwrite --bundle=build/app/outputs/bundle/release/app-release.aab --output=build/elements.apks --ks=$HOME/.android/upload-keystore.jks --ks-pass=file:$HOME/.android/pw.txt --ks-key-alias=upload --key-pass=file:$HOME/.android/pw.txt # --local-testing
+    generates:
+      - build/elements.apks
+
+  install:
+    deps: [release]
+    cmds:
+      - java -jar ../pac/others/bundletool-all-1.14.1.jar install-apks --apks=build/elements.apks
+
+  release-apk:
+    cmds:
+      - flutter build apk --split-per-abi --release
+      - ln -s app-arm64-v8a-release.apk build/app/outputs/flutter-apk/app-release.apk
+    generates:
+      - build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+      - build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+      - build/app/outputs/flutter-apk/app-x86_64-release.apk
+      - build/app/outputs/flutter-apk/app-release.apk
+
+  install-apk:
+    deps: [release-apk]
+    cmds:
+      - flutter install
