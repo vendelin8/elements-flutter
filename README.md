@@ -2,6 +2,9 @@
 
 elements is a cross-platform mobile and web app to show Chinese zodiac five elements as a pageable calendar, written in Flutter/Dart
 
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="80"
+ alt="Get it on Google Play">](https://play.google.com/store/apps/details?id=io.github.vendelin8.elements)
+ 
 The project uses `task` to make your life easier. If you're not familiar with Taskfiles you can take a look at [this quickstart guide](https://taskfile.dev/).
 
 ## Overview
