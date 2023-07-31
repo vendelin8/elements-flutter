@@ -4,7 +4,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+100
 
 environment:
-  sdk: ">=2.19.5 <3.0.0"
+  sdk: ">=3.0.0"
   flutter: ">=3.7.12"
 
 dependencies:
@@ -13,14 +13,14 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  intl: ^0.18.1
+  intl: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.1
-  flutter_launcher_icons: ^0.13.1
+  flutter_lints: any
+  flutter_launcher_icons: any
 
 flutter_icons:
   image_path: img/GooglePlayStore.png
