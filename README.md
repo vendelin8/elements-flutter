@@ -1,11 +1,17 @@
-# elements
+# Elements
 
-elements is a cross-platform mobile and web app to show Chinese zodiac five elements as a pageable calendar, written in Flutter/Dart
+Elements is a cross-platform mobile and web app to show Chinese zodiac five elements as a pageable calendar, written in Flutter/Dart
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="80"
- alt="Get it on Google Play">](https://play.google.com/store/apps/details?id=io.github.vendelin8.elements)
- 
 The project uses `task` to make your life easier. If you're not familiar with Taskfiles you can take a look at [this quickstart guide](https://taskfile.dev/).
+
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="80">](https://play.google.com/store/apps/details?id=io.github.vendelin8.elements)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/io.github.vendelin8.elements/)
+
+Or download the latest APK from the [Releases Section](https://github.com/vendelin8/elements-flutter/releases/latest).
 
 ## Overview
 Chinese zodiac has five elements: wood, fire, earth, metal and water. You can find unlimited number of documents on these.
