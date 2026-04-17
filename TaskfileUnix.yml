@@ -1,0 +1,28 @@
+version: 3
+
+vars:
+  BUILD: "{{.TMP}}/flutter-build-elements"
+
+tasks:
+  dep:
+    status:
+      - test -d {{.BUILD}}
+    internal: true
+    cmd: mkdir -p {{.BUILD}}
+
+  dep2:
+    status:
+      - test -d {{.BUILD}}
+    internal: true
+    cmd: ln -s {{.BUILD}} build
+
+  dep3:
+    internal: true
+    cmd: tput civis
+
+  deps:
+    deps: [dep, dep2, dep3]
+
+  term:
+    cmd:
+      defer: tput cnorm

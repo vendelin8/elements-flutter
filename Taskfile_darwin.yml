@@ -1,0 +1,9 @@
+version: 3
+
+vars:
+  TMP: /Volumes/tmp
+
+includes:
+  unix:
+    taskfile: ./TaskfileUnix.yml
+    flatten: true
