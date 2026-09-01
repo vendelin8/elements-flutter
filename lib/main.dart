@@ -44,7 +44,7 @@ class Main extends StatelessWidget {
 }
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   HomeState createState() => HomeState();
@@ -87,8 +87,7 @@ class HomeState extends State<Home> {
             ),
           ),
           ElevatedButton(
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF43A047))),
+            style: ButtonStyle(backgroundColor: WidgetStateProperty.all<Color>(const Color(0xFF43A047))),
             onPressed: () => showDatePicker(
               context: context,
               firstDate: firstDate,
@@ -97,11 +96,8 @@ class HomeState extends State<Home> {
               currentDate: now,
             ).then(onDateChange),
             child: Center(
-              child: Text(
-                  DateFormat.yMd(Localizations.maybeLocaleOf(context)?.toLanguageTag())
-                      .format(_currentDay),
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 54, color: Colors.white70)),
+              child: Text(DateFormat.yMd(Localizations.maybeLocaleOf(context)?.toLanguageTag()).format(_currentDay),
+                  textAlign: TextAlign.center, style: const TextStyle(fontSize: 54, color: Colors.white70)),
             ),
           ),
         ],
